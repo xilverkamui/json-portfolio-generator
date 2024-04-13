@@ -1,6 +1,6 @@
-var defaultOrder = ["shortBio", "projects", "work", "education", "awards", "volunteer", "social"];
-var functions = [];
-var hidden, visibilityChange;
+let defaultOrder = ["shortBio", "bio", "projects", "work", "education", "awards", "volunteer", "social"];
+let functions = [];
+let hidden, visibilityChange;
 
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
@@ -31,6 +31,7 @@ function handleVisibilityChange() {
 document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
 functions["shortBio"] = addShortBio;
+functions["bio"] = addBio;
 functions["work"] = addWork;
 functions["projects"] = addProjectSections;
 functions["awards"] = addAwards;
@@ -46,18 +47,18 @@ $.getJSON(RESUME_LOCATION, function (data) {
 
 function setData(data) {
     DOMMain = document.getElementById("main");
-    document.title = data.personal.name + ',' + data.personal.title;
-    titleOnActive = data.personal.name + ',' + data.personal.title;
+    titleOnActive = data.personal.name + ', ' + data.personal.title;
+    document.title = titleOnActive;
     document.getElementById("name").innerHTML = data.personal.name;
     document.getElementById("title").innerHTML = data.personal.title;
-    addContacts(data.personal);
+    //addContacts(data.personal);
 
-    var sectionOrder = defaultOrder;
+    let sectionOrder = defaultOrder;
     if (data.displayOrder != undefined && data.displayOrder.length != 0) {
         sectionOrder = data.displayOrder;
     }
 
-    for (var i in sectionOrder) {
+    for (let i in sectionOrder) {
         functions[sectionOrder[i]](data);
     }
 
@@ -69,17 +70,49 @@ function setData(data) {
         hideFooter();
 }
 
-function addShortBio(data) {
-    var personal = data.personal;
+//unused
+function addShortBio(data) {    
+    let personal = data.personal;
     if (personal.shortBio != undefined && personal.shortBio != '') {
         append(DOMMain, HTMLShortBio.replace("%data%", personal.shortBio));
     }
 
 }
 
+function addBio(data) {
+    let personal = data.personal;
+    append(DOMMain, HTMLBioStart);
+    let domBioLeft = document.getElementById("bio-left");
+    //left column
+    if (personal.photoUrl != undefined && personal.photoUrl != '')
+       append(domBioLeft, HTMLBioPhoto.replace("%data%", personal.photoUrl));
+    if (personal.email != undefined && personal.email != '')
+       append(domBioLeft, replaceAll(HTMLEmail, "%data%", personal.email));
+    if (personal.phone != undefined && personal.phone != '')
+        append(domBioLeft, HTMLPhone.replace("%data%", personal.phone));
+    if (personal.location != undefined && personal.location != '')
+        append(domBioLeft, HTMLLocation.replace("%data%", personal.location));
+    if (personal.website != undefined && personal.website != '')
+        append(domBioLeft, replaceAll(HTMLPersonalWebsite, "%data%", personal.website));
+
+    //right column        
+    let domBioRight = document.getElementById("bio-right");
+    if (personal.shortBio != undefined && personal.shortBio != '')
+        append(domBioRight, HTMLShortBio.replace("%data%", personal.shortBio));
+    if (data.personal.profiles != undefined || data.personal.profiles.length != 0) {
+        let social = personal.profiles;
+        for (let i in social) {
+            let socialItem =  replaceAll(HTMLSocialItem, "%network%", social[i].network.toLowerCase());
+            socialItem = socialItem.replace("%link%", social[i].url);
+            append(domBioRight, socialItem);
+        }
+    }
+}
+
+//unused
 function addContacts(personal) {
     if (personal.email != undefined && personal.email != '')
-        append(document.getElementById("contacts"), HTMLEmail.replace("%data%", personal.email));
+        append(document.getElementById("contacts"), replaceAll(HTMLEmail, "%data%", personal.email));
     if (personal.phone != undefined && personal.phone != '')
         append(document.getElementById("contacts"), HTMLPhone.replace("%data%", personal.phone));
     if (personal.location != undefined && personal.location != '')
@@ -280,31 +313,31 @@ function addEducation(data) {
     append(DOMMain, HTMLEducationStart);
     var domEducation = document.getElementById("education");
     for (var i in education) {
-        var institution = HTMLInstitutionName.replace("%data%", education[i].institution);
-        var degreeString = education[i].degree + ", " + education[i].major;
-        var degreeAndGraduation = HTMLEmploymentDateAndLocation.replace("%date%", education[i].graduationDate);
+        let institution = HTMLInstitutionName.replace("%data%", education[i].institution);
+        let degreeString = education[i].degree + ", " + education[i].major;
+        let degreeAndGraduation = HTMLEmploymentDateAndLocation.replace("%date%", education[i].graduationDate);
         degreeAndGraduation = degreeAndGraduation.replace("%location%", degreeString);
 
 
         domEducation.innerHTML += institution;
         domEducation.innerHTML += degreeAndGraduation;
         if (education[i].gpa != undefined && education[i].gpa != '') {
-            var gpa = HTMLGpa.replace("%data%", education[i].gpa);
+            let gpa = HTMLGpa.replace("%data%", education[i].gpa);
             domEducation.innerHTML += gpa;
         }
     }
 }
 
-function addSocialLinks(data) {
+function addSocialLinks(data) {     //unused
     if (data.personal.profiles === undefined || data.personal.profiles.length === 0)
         return;
-    var social = data.personal.profiles;
+    let social = data.personal.profiles;
     DOMMain.innerHTML += HTMLSocialStart;
-    var domSoical = document.getElementById("social");
-    for (var i in social) {
-        var socialItem = HTMLSocialItem.replace("%network%", social[i].network.toLowerCase());
+    let domSocial = document.getElementById("social");
+    for (let i in social) {
+        let socialItem =  replaceAll(HTMLSocialItem, "%network%", social[i].network.toLowerCase());
         socialItem = socialItem.replace("%link%", social[i].url);
-        domSoical.innerHTML += socialItem;
+        domSocial.innerHTML += socialItem;
     }
 
 

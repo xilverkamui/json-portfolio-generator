@@ -1,14 +1,18 @@
-var RESUME_LOCATION="https://raw.githubusercontent.com/" + GITHUB_USERNAME +"/portfolio-generator/master/resume.json";
+var RESUME_LOCATION="resume.json";
 
 var titleOnBlur = "Miss You :(";
 var titleOnActive = "Portfolio";
 
-var HTMLEmail = '<li><span class="glyphicon glyphicon-envelope contact-icon"></span><span class="contact-text">%data%</span></li>';
-var HTMLPhone = '<li><span class="glyphicon glyphicon-earphone contact-icon"></span><span class="contact-text">%data%</span></li>';
-var HTMLPersonalWebsite = '<li><span class="glyphicon glyphicon-globe contact-icon"></span><span class="contact-text"><a href ="%data%">%data%</a></span></li>';
-var HTMLLocation = '<li><span class="glyphicon glyphicon-home contact-icon"></span><span class="contact-text">%data%</span></li>';
+var HTMLEmail = '<span class="glyphicon glyphicon-envelope contact-icon"></span><span class="contact-text"><a href ="mailto:%data%" target="_blank">%data%</a></span><br />';
+var HTMLPhone = '<span class="glyphicon glyphicon-earphone contact-icon"></span><span class="contact-text">%data%</span><br />';
+var HTMLPersonalWebsite = '<span class="glyphicon glyphicon-globe contact-icon"></span><span class="contact-text"><a href ="%data%">%data%</a></span><br />';
+var HTMLLocation = '<span class="glyphicon glyphicon-home contact-icon"></span><span class="contact-text">%data%</span><br />';
+var HTMLBioPhoto = '<img src="%data%" alt="Photo" class="contact-photo"><br />';
 
-var HTMLShortBio = '<div class="row"><div class="col-md-12"><p id ="short-bio" class="text-center">%data%</p></div></div><hr/>';
+//var HTMLShortBio = '<div class="row"><div class="col-md-12"><p id ="short-bio" class="text-center">%data%</p></div></div><hr/>';
+var HTMLShortBio = '<p id ="short-bio" class="text-center">%data%</p>';
+
+var HTMLBioStart = '<div class="bio-container"><div id="bio-left" class="bio-left"></div><div id="bio-right" class="bio-right"></div></div><hr />';
 
 var HTMLProjectsStart = '<div class="row"><div class="col-md-12"><h2 class="text-muted">%sectionTitle%</h2></div></div><div id="projects%id%"></div><hr/>';
 var HTMLProjectRow = '<div class="row text-center project-row"></div>';
@@ -37,9 +41,9 @@ var HTMLEducationStart = ' <div class="row"><div class="col-md-12"><h2 class="te
 var HTMLDegree = '<div class="col-md-4 location-text">%data%</div>';
 var HTMLGpa = '<div class="row"><div class="col-md-12 gpa-text text-left">GPA: %data%</div></div>';
 
-var HTMLSocialStart = '<div class="social"><ul id="social" class="social-list"></ul></div>';
-var HTMLSocialItem = '<li ><a href="%link%" target="_blank"><span class="zocial-%network%"></span></a></li>';
-var HTMLSocialEnd = '</ul>';
+//var HTMLSocialStart = '<div class="social"><ul id="social" class="social-list"></ul></div>';
+var HTMLSocialItem = '<a href="%link%" target="_blank"><span class="zocial %network% social-icon">%network%</span></a>';
+//var HTMLSocialEnd = '</ul>';
 
 var HTMLAwardsStart = ' <div class="row"><div class="col-md-12"><h2 class="text-muted">Awards</h2></div></div><div id="awards"></div><hr/>';
 var HTMLAwardTitle = '<div class="row"><div class="col-md-12"><h3>%data%</h3></div></div>';

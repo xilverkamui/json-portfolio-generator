@@ -1,10 +1,18 @@
-@import url(http://weloveiconfonts.com/api/?family=zocial);
+/* @import url(https://weloveiconfonts.com/api/?family=zocial); */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css);
 
-/* zocial */
-[class*="zocial-"]:before {
-  font-family: 'zocial', sans-serif;
+/* zocial 
+//[class*="zocial-"]:before {
+//  font-family: 'zocial', sans-serif;
+}*/
+.social-icon {
+    overflow: hidden;
+	max-width: 2.5em;
+	max-height: 2.15em;
+	margin-right: 5px;
+	white-space: nowrap;
+    font-size: 25px;
 }
-
 
 .source-sans{
     font-family: 'Source Sans Pro', sans-serif;
@@ -75,6 +83,7 @@ ul {
 .bullet-list{
     list-style-type: disc;
 }
+
 #contacts{
     margin-top: 20px;
 }
@@ -117,7 +126,7 @@ ul {
 }
 .gpa-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   line-height: 16px;
 }
@@ -126,13 +135,18 @@ ul {
     margin-left: 5px;
 }
 
+.contact-photo{
+    max-width: 20%;
+    border-radius: 50%; 
+}
+
 .social-list{
     font-size: 3.5em;
     line-height: 2.5em;
 }
 
 .social {
-    width: 100%;
+    width: 20%;
     margin-left: auto ;
     margin-right: auto ;
 }
@@ -155,6 +169,23 @@ ul {
 .award-detail-text{
     padding-left: 20px;
 }
+
+.bio-container {
+    display: flex;
+}
+
+.bio-left {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.bio-right {
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+}
+
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
