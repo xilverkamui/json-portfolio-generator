@@ -1,15 +1,15 @@
 {
-  "displayOrder": ["shortBio","projects", "work", "education", "awards", "volunteer", "social"],
+  "displayOrder": ["shortBio","bio","projects", "work", "education", "awards", "volunteer", "social"],
   "hideDesignedBy": false,
   "personal": {
     "name": "Xilver Kamui",
     "title": "Data Warehouse Engineer",
-    "email": "sekhon@navdeep.co",
+    "email": "xilver@xkamui.eu.org",
     "phone": "123-456-7890",
     "photoUrl":"photo.png",
     "website": "https://xilverkamui.github.io/json-portfolio-generator/",
     "shortBio": "Hello! I am Xilver Kamui. I make stuff. Here's some of it.",
-    "location": "Surabaya",
+    "location": "Surabaya, Indonesia",
     "profiles": [
       {
         "network": "Twitter",

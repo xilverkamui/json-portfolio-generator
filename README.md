@@ -129,9 +129,9 @@ Example:
 ### Education/Awards
 See demo portfolio for examples.
 
-### Remove "Designed By Navdeep Sekhon"
+### Remove "Designed By Xilver Kamui"
 
-If you want to remove the "Designed By Xilver Kamui" at the bottom of the page(it's ok, I don't mind), just set `hideDesignedBy` to true.
+If you want to remove the "Designed By Xilver Kamui" at the bottom of the page (it's ok, I don't mind), just set `hideDesignedBy` to true.
 ```json
 "hideDesignedBy": true,
 ```
@@ -144,4 +144,4 @@ I love it when my work helps someone. So if you're using this project or it insp
 
 #### Host your portfolio free using github pages :
 
-I host my portfolio using github pages. To use the framework to make your site, you just need to change resume.json and update the `RESUME_LOCATION` in `constants.js` and you're good to go.
+I host my portfolio using github pages. To use the framework to make your site, you just need to change `resume.json` and update the `RESUME_LOCATION` in `constants.js` and you're good to go.
