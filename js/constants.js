@@ -1,4 +1,4 @@
-var RESUME_LOCATION="resume.json";
+var RESUME_LOCATION="resume2.json";
 
 var titleOnBlur = "Miss You :(";
 var titleOnActive = "Portfolio";

@@ -1,5 +1,5 @@
 {
-  "displayOrder": ["bio","projects", "work", "education", "awards"],
+  "displayOrder": ["shortBio","bio","projects", "work", "education", "awards", "volunteer", "social"],
   "hideDesignedBy": false,
   "personal": {
     "name": "Xilver Kamui",
