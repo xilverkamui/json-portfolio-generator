@@ -2,30 +2,26 @@
   "displayOrder": ["shortBio","projects", "work", "education", "awards", "volunteer", "social"],
   "hideDesignedBy": false,
   "personal": {
-    "name": "Navdeep Sekhon",
-    "title": "Software Developer",
+    "name": "Xilver Kamui",
+    "title": "Data Warehouse Engineer",
     "email": "sekhon@navdeep.co",
     "phone": "123-456-7890",
     "photoUrl":"photo.png",
-    "website": "http://www.navdeepsekhon.com",
-    "shortBio": "Hello! I am Navdeep Sekhon. I make stuff. Here's some of it.",
-    "location": "Delaware",
+    "website": "https://xilverkamui.github.io/json-portfolio-generator/",
+    "shortBio": "Hello! I am Xilver Kamui. I make stuff. Here's some of it.",
+    "location": "Surabaya",
     "profiles": [
       {
         "network": "Twitter",
-        "url": "http://twitter.com/navdeepsekhon9"
+        "url": "http://twitter.com/"
       },
       {
         "network": "github",
-        "url": "http://decompile.xyz"
+        "url": "https://github.com/xilverkamui/"
       },
       {
         "network": "linkedin",
-        "url": "https://www.linkedin.com/in/navdeepsekhon"
-      },
-      {
-        "network": "facebook",
-        "url": "facebook.com/navdeepsekhon6"
+        "url": "https://www.linkedin.com/in/eriyantow"
       }
     ]
   },

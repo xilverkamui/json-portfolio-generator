@@ -1,7 +1,7 @@
 # portfolio-generator
 JS framework to dynamically generate a portfolio site from a JSON resume
 
-<a href="http://navdeepsekhon.github.io/portfolio-generator" target="_blank">DEMO</a> | <a href="http://www.navdeepsekhon.com" target="_blank">My portfolio</a>
+<a href="https://xilverkamui.github.io/json-portfolio-generator/" target="_blank">DEMO</a>
 
 ## Table of Contents
  - [Features](#features)
@@ -41,29 +41,29 @@ All the elements in personal section are optional. All the social media profiles
 Example:
 ```json
 "personal": {
-    "name": "Navdeep Sekhon",
-    "title": "Software Developer",
+    "name": "Xilver Kamui",
+    "title": "Data Warehouse Engineer",
     "email": "sekhon@navdeep.co",
     "phone": "123-456-7890",
-    "website": "http://www.navdeepsekhon.com",
+    "website": "https://xilverkamui.github.io/json-portfolio-generator/",
     "shortBio": "Hello! I am Navdeep Sekhon. I make stuff. Here's some of it.",
     "location": "Delaware",
     "profiles": [
       {
         "network": "Twitter",
-        "url": "http://twitter.com/navdeepsekhon9"
+        "url": "http://twitter.com/"
       },
       {
         "network": "github",
-        "url": "http://decompile.xyz"
+        "url": "https://github.com/xilverkamui/"
       },
       {
         "network": "linkedin",
-        "url": "https://www.linkedin.com/in/navdeepsekhon"
+        "url": "https://www.linkedin.com/in/eriyantow"
       },
       {
         "network": "facebook",
-        "url": "facebook.com/navdeepsekhon6"
+        "url": "facebook.com/"
       }
     ]
   }
@@ -131,7 +131,7 @@ See demo portfolio for examples.
 
 ### Remove "Designed By Navdeep Sekhon"
 
-If you want to remove the "Designed By Navdeep Sekhon" at the bottom of the page(it's ok, I don't mind), just set `hideDesignedBy` to true.
+If you want to remove the "Designed By Xilver Kamui" at the bottom of the page(it's ok, I don't mind), just set `hideDesignedBy` to true.
 ```json
 "hideDesignedBy": true,
 ```
