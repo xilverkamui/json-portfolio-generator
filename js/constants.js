@@ -26,7 +26,8 @@ var HTMLProjectBulletDescriptionItem = "<li>%data%</li>";
 var HTMLProjectBulletDescriptionEnd = "</ul>";
 
 var HTMLWorkExperienceStart = '<div class="row"><div class="col-md-12"><h2 class="text-muted">Work Experience</h2></div></div><div id="work"></div><hr/>';
-var HTMLInstitutionName = '<div class="row"><div class="col-md-12"><h3>%data%</h3></div></div>';
+var HTMLInstitutionName = '<div class="row"><div class="col-md-12"><a href="%url%" target="_blank"><h3>%data%</h3></a></div></div>';
+var HTMLInstitutionNameWithoutUrl = '<div class="row"><div class="col-md-12"><h3>%data%</h3></div></div>';
 var HTMLEmploymentDateAndLocation = '<div class="row"><div class="col-md-6 location-text">%location%</div><div class="col-md-6 date-text text-right">%date%</div></div>';
 var HTMLEmployer = '<div class="row"><div class="col-md-12"><a href="%url%" target="_blank"><h3>%employer%</h3></a></div>';
 var HTMLEmployerWithoutUrl = '<div class="row"><div class="col-md-12"><h3>%employer%</h3></div>';
@@ -41,9 +42,9 @@ var HTMLEducationStart = ' <div class="row"><div class="col-md-12"><h2 class="te
 var HTMLDegree = '<div class="col-md-4 location-text">%data%</div>';
 var HTMLGpa = '<div class="row"><div class="col-md-12 gpa-text text-left">GPA: %data%</div></div>';
 
-//var HTMLSocialStart = '<div class="social"><ul id="social" class="social-list"></ul></div>';
+var HTMLSocialStart = '<div class="social">';
 var HTMLSocialItem = '<a href="%link%" target="_blank"><span class="zocial %network% social-icon">%network%</span></a>';
-//var HTMLSocialEnd = '</ul>';
+var HTMLSocialEnd = '</div>'
 
 var HTMLAwardsStart = ' <div class="row"><div class="col-md-12"><h2 class="text-muted">Awards</h2></div></div><div id="awards"></div><hr/>';
 var HTMLAwardTitle = '<div class="row"><div class="col-md-12"><h3>%data%</h3></div></div>';
