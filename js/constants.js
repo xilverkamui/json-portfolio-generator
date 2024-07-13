@@ -4,10 +4,12 @@ var titleOnBlur = "Miss You :(";
 var titleOnActive = "Portfolio";
 
 var HTMLEmail = '<span class="glyphicon glyphicon-envelope contact-icon"></span><span class="contact-text"><a href ="mailto:%data%" target="_blank">%data%</a></span><br />';
-var HTMLPhone = '<span class="glyphicon glyphicon-earphone contact-icon"></span><span class="contact-text">%data%</span><br />';
+var HTMLPhone = '<span class="glyphicon glyphicon-phone contact-icon"></span><span class="contact-text">%data%</span><br />';
 var HTMLPersonalWebsite = '<span class="glyphicon glyphicon-globe contact-icon"></span><span class="contact-text"><a href ="%data%">%data%</a></span><br />';
 var HTMLLocation = '<span class="glyphicon glyphicon-home contact-icon"></span><span class="contact-text">%data%</span><br />';
 var HTMLBioPhoto = '<img src="%data%" alt="Photo" class="contact-photo"><br />';
+var HTMLResumeUrl = '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file contact-icon"></span><span class="contact-text"><a href ="%data%">Download My Resume</a></span></button><br />';
+var HTMLContactFormUrl = '<br /><span class="glyphicon glyphicon-send contact-icon"></span><span class="contact-text"><a href ="%data%">Ping me a message</a></span><br />';
 
 //var HTMLShortBio = '<div class="row"><div class="col-md-12"><p id ="short-bio" class="text-center">%data%</p></div></div><hr/>';
 var HTMLShortBio = '<p id ="short-bio" class="text-center">%data%</p>';

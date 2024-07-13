@@ -10,6 +10,8 @@
     "website": "https://xilverkamui.github.io/json-portfolio-generator/",
     "shortBio": "Hello! I am Xilver Kamui. I make stuff. Here's some of it.",
     "location": "Surabaya, Indonesia",
+    "resumeUrl":"https://yoursite.com/resume.pdf",
+    "contactFormUrl":"https://forms.gle/abcde",
     "profiles": [
       {
         "network": "Twitter",
